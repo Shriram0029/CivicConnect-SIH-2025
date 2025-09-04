@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #f8f9fa;
+  color: #333;
+  padding: 15px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.header h2 {
+  margin: 0;
+}
+.header button {
+  padding: 8px 15px;
+  border: none;
+  background: #e74c3c;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.header button:hover {
+  background: #c0392b;
+}
+
+/* Stats */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.stat-card {
+  background: white;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.stat-card span {
+  display: block;
+  font-size: 20px;
+  margin-top: 5px;
+}
+.stat-card.assigned { border-top: 5px solid #3498db; }
+.stat-card.resolved { border-top: 5px solid #2ecc71; }
+.stat-card.pending { border-top: 5px solid #f39c12; }
+
+/* Issues */
+.issue-list {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+.issue-list h3 {
+  margin-top: 0;
+}
+.issue-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.issue-list li {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+.issue-list li:last-child {
+  border-bottom: none;
+}
+
+/* Action Buttons */
+.action-btn {
+  margin-top: 6px;
+  margin-right: 6px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+}
+.action-btn.onsite { background: #2980b9; color: white; }
+.action-btn.progress { background: #f39c12; color: white; }
+.action-btn.resolve { background: #27ae60; color: white; }
+
+.action-btn:hover { opacity: 0.85; }
+
+/* File Upload */
+.file-upload {
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+/* Map */
+.map-section {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+#mapPlaceholder {
+  background: #dfe6e9;
+  height: 200px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+}

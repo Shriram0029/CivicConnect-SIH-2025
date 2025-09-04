@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Escalation & SLA Monitor</title>
+  <link rel="stylesheet" href="escalation.css">
+</head>
+<body>
+  <header>
+    <h1>Escalation & SLA Monitor</h1>
+    <nav>
+      <button onclick="goToDashboard()">🏠 Dashboard</button>
+      <a href="issues.html">Issues</a>
+      <a href="task-assignment.html">Tasks</a>
+      <a href="analytics.html">Analytics</a>
+      <a href="escalation.html" class="active">Escalation</a>
+      <button id="logoutBtn">Logout</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="overdue">
+      <h2>⏰ Overdue Issues</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Category</th>
+            <th>Location</th>
+            <th>Dept</th>
+            <th>Deadline</th>
+            <th>Overdue (days)</th>
+            <th>Status</th>
+            <th>Escalated To</th>
+          </tr>
+        </thead>
+        <tbody id="overdueTable">
+          <!-- JS will populate -->
+        </tbody>
+      </table>
+    </section>
+
+    <section class="log">
+      <h2>📜 Escalation Log</h2>
+      <ul id="escalationLog">
+        <!-- JS will populate -->
+      </ul>
+    </section>
+  </main>
+
+  <script src="escalation.js"></script>
+</body>
+</html>

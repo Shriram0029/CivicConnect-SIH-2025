@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Issue Details</title>
+  <link rel="stylesheet" href="issue-details.css" />
+</head>
+<body>
+  <header>
+    <h1>CivicConnect – Issue Details</h1>
+    <nav>
+      <button onclick="goToDashboard()">🏠 Dashboard</button>
+      <a href="issues.html">All Issues</a>
+      <button id="logoutBtn">Logout</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="issue-container">
+      <h2 id="issueTitle">Loading Issue...</h2>
+
+      <div class="issue-meta">
+        <p><strong>ID:</strong> <span id="issueId"></span></p>
+        <p><strong>Category:</strong> <span id="issueCategory"></span></p>
+        <p><strong>Status:</strong> <span id="issueStatus"></span></p>
+        <p><strong>Priority:</strong> <span id="issuePriority"></span></p>
+        <p><strong>Department:</strong> <span id="issueDepartment"></span></p>
+        <p><strong>Location:</strong> <span id="issueLocation"></span></p>
+      </div>
+
+      <div class="issue-media">
+        <img id="issueImage" src="" alt="Issue Photo" />
+      </div>
+
+      <div class="issue-description">
+        <h3>Description</h3>
+        <p id="issueDescription"></p>
+      </div>
+
+      <div id="map"></div>
+
+      <div class="issue-actions">
+        <button id="assignBtn">Assign Task</button>
+        <button id="updateStatusBtn">Update Status</button>
+        <button id="escalateBtn">Escalate</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="issue-details.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+</body>
+</html>

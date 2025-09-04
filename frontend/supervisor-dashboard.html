@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Field Supervisor Dashboard - CivicConnect</title>
+  <link rel="stylesheet" href="supervisor-dashboard.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <h2>👷 Field Supervisor Dashboard</h2>
+    <button id="logoutBtn">Logout</button>
+  </header>
+
+  <!-- Quick Stats -->
+  <section class="stats">
+    <div class="stat-card assigned">Assigned <span id="assignedCount">0</span></div>
+    <div class="stat-card resolved">Resolved <span id="resolvedCount">0</span></div>
+    <div class="stat-card pending">Pending <span id="pendingCount">0</span></div>
+  </section>
+
+  <!-- Assigned Issues -->
+  <section class="issue-list">
+    <h3>📌 My Assigned Issues</h3>
+    <ul id="assignedIssues">
+      <li>No issues assigned yet ✅</li>
+    </ul>
+  </section>
+
+  <!-- Map -->
+  <section class="map-section">
+    <h3>🗺️ My Issue Locations</h3>
+    <div id="mapPlaceholder">[Map Placeholder]</div>
+  </section>
+
+  <script src="supervisor-dashboard.js"></script>
+</body>
+</html>

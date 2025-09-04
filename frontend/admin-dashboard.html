@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard - CivicConnect</title>
+  <link rel="stylesheet" href="admin-dashboard.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2 class="logo">CivicConnect</h2>
+    <ul class="nav-links">
+      <li><a href="#" id="nav-overview" class="active">📊 Overview</a></li>
+      <li><a href="analytics.html">📈 Analytics</a></li>
+      <li><a href="issues.html">📝 Issues</a></li>
+      <li><a href="escalation.html">⚠️ Escalations</a></li>
+      <li><a href="settings.html">⚙️ Settings</a></li>
+      <hr />
+      <!-- Only Admin can see these navigation links -->
+      <li class="role-links"><a href="staff-dashboard.html">👥 Dept Staff View</a></li>
+      <li class="role-links"><a href="supervisor-dashboard.html">👷 Supervisor View</a></li>
+      <li><a href="#" id="logoutBtn">🚪 Logout</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <header class="header">
+      <h1>Admin Dashboard</h1>
+      <p>Welcome, <span id="adminName"></span></p>
+    </header>
+
+    <!-- Quick Stats -->
+    <section class="stats">
+      <div class="stat-card total">Total Issues <span id="totalIssues">0</span></div>
+      <div class="stat-card open">Open <span id="openIssues">0</span></div>
+      <div class="stat-card progress">In Progress <span id="progressIssues">0</span></div>
+      <div class="stat-card resolved">Resolved <span id="resolvedIssues">0</span></div>
+    </section>
+
+    <!-- Live Map -->
+    <section class="map-section">
+      <h2>🗺️ Live City Map</h2>
+      <div id="mapPlaceholder">[Map will be integrated here]</div>
+    </section>
+
+    <!-- Escalation Panel -->
+    <section class="escalation-panel">
+      <h2>⚠️ Escalated / Overdue Issues</h2>
+      <ul id="escalationList">
+        <li>No escalations yet ✅</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="admin-dashboard.js"></script>
+</body>
+</html>

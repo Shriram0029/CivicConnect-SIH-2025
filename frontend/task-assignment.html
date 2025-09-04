@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Assignment – CivicConnect</title>
+  <link rel="stylesheet" href="task-assignment.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Department Task Queue</h1>
+    <nav>
+      <a href="staff-dashboard.html">Dashboard</a>
+      <a href="issues.html">All Issues</a>
+      <a href="task-assignment.html" class="active">Task Assignment</a>
+      <button id="logoutBtn">Logout</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Department Pending Issues -->
+    <section class="queue-section">
+      <h2>📝 Pending Issues for My Department</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Category</th>
+            <th>Priority</th>
+            <th>Deadline</th>
+            <th>Status</th>
+            <th>Assign</th>
+          </tr>
+        </thead>
+        <tbody id="issueTableBody">
+          <!-- Issues injected here -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Workload Overview -->
+    <section class="team-workload">
+      <h2>👷 Field Team Workload</h2>
+      <div id="teamList">
+        <!-- Team cards injected here -->
+      </div>
+    </section>
+
+    <!-- Live Updates -->
+    <section class="live-updates">
+      <h2>📡 Live Field Updates</h2>
+      <ul id="updatesList">
+        <!-- Live updates appear here -->
+      </ul>
+    </section>
+  </main>
+
+  <script src="task-assignment.js"></script>
+</body>
+</html>

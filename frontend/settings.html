@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>⚙️ Settings - CivicConnect</title>
+  <link rel="stylesheet" href="settings.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <h2>⚙️ System Settings</h2>
+    <button id="logoutBtn">Logout</button>
+  </header>
+
+  <!-- User Management -->
+  <section class="settings-section">
+    <h3>👤 User Management</h3>
+    <form id="addUserForm">
+      <input type="text" id="newName" placeholder="Full Name" required />
+      <input type="email" id="newEmail" placeholder="Email" required />
+      <select id="newRole" required>
+        <option value="">Select Role</option>
+        <option value="Admin">Admin</option>
+        <option value="Staff">Staff</option>
+        <option value="FieldSupervisor">Field Supervisor</option>
+      </select>
+      <input type="password" id="newPassword" placeholder="Password" required />
+      <button type="submit">➕ Add User</button>
+    </form>
+
+    <h4>Registered Users</h4>
+    <table id="usersTable">
+      <thead>
+        <tr>
+          <th>Name</th><th>Email</th><th>Role</th><th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <!-- SLA Config -->
+  <section class="settings-section">
+    <h3>⏱️ SLA Configuration</h3>
+    <form id="slaForm">
+      <label>Default SLA (days):</label>
+      <input type="number" id="slaDays" min="1" required />
+      <button type="submit">Save SLA</button>
+    </form>
+  </section>
+
+  <script src="settings.js"></script>
+</body>
+</html>

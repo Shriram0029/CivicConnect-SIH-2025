@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>📊 Analytics & Reports - CivicConnect</title>
+  <link rel="stylesheet" href="analytics.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <h2>📊 Analytics & Reports</h2>
+    <button id="logoutBtn">Logout</button>
+  </header>
+
+  <main>
+    <!-- Heatmap -->
+    <section class="heatmap">
+      <h3>🔥 Issue Hotspots</h3>
+      <div id="map"></div>
+    </section>
+
+    <!-- Performance Metrics -->
+    <section class="charts">
+      <h3>📈 Performance Metrics</h3>
+      <div class="chart-grid">
+        <canvas id="resolutionChart"></canvas>
+        <canvas id="deptChart"></canvas>
+        <canvas id="categoryChart"></canvas>
+      </div>
+    </section>
+
+    <!-- Reports -->
+    <section class="reports">
+      <h3>📂 Reports</h3>
+      <button id="downloadCSV">📥 Download CSV</button>
+      <button id="downloadPDF">📄 Download PDF</button>
+    </section>
+  </main>
+
+  <script src="analytics.js"></script>
+</body>
+</html>

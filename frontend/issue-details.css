@@ -1,0 +1,86 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f6f9;
+  color: #333;
+}
+
+header {
+  background: #2a3f54;
+  color: #fff;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+nav a, nav button {
+  color: #fff;
+  margin-left: 15px;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+main {
+  padding: 20px;
+}
+
+.issue-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.issue-meta p {
+  margin: 5px 0;
+}
+
+.issue-media img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  margin: 15px 0;
+}
+
+.issue-description {
+  margin: 15px 0;
+}
+
+#map {
+  width: 100%;
+  height: 300px;
+  margin: 15px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.issue-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.issue-actions button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
+
+#assignBtn { background: #007bff; }
+#updateStatusBtn { background: #28a745; }
+#escalateBtn { background: #dc3545; }
+
+.hidden {
+  display: none !important;
+}

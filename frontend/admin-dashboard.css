@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  background: #f4f6f9;
+  color: #333;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background: #2b3a55;
+  color: white;
+  height: 100vh;
+  padding: 20px;
+  position: fixed;
+}
+.sidebar .logo {
+  margin: 0 0 30px;
+  font-size: 20px;
+  text-align: center;
+}
+.nav-links {
+  list-style: none;
+  padding: 0;
+}
+.nav-links li {
+  margin: 15px 0;
+}
+.nav-links a {
+  color: #ddd;
+  text-decoration: none;
+  font-weight: 500;
+}
+.nav-links a.active,
+.nav-links a:hover {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Divider for extra clarity */
+.nav-links hr {
+  border: 0;
+  border-top: 1px solid #444;
+  margin: 15px 0;
+}
+
+/* Highlight role-switch links */
+.role-links a {
+  color: #9ad3ff;
+  font-weight: 600;
+}
+.role-links a:hover {
+  color: #fff;
+}
+
+/* Main */
+.main-content {
+  margin-left: 260px;
+  padding: 20px;
+  width: calc(100% - 260px);
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.header h1 {
+  margin: 0;
+}
+
+/* Stats */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 30px;
+}
+.stat-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 600;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+.stat-card span {
+  display: block;
+  font-size: 22px;
+  margin-top: 5px;
+}
+.stat-card.total { border-top: 5px solid #444; }
+.stat-card.open { border-top: 5px solid #e74c3c; }
+.stat-card.progress { border-top: 5px solid #f1c40f; }
+.stat-card.resolved { border-top: 5px solid #2ecc71; }
+
+/* Map */
+.map-section {
+  margin-bottom: 30px;
+}
+#mapPlaceholder {
+  background: #dfe6e9;
+  height: 300px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #555;
+  font-weight: 500;
+}
+
+/* Escalation */
+.escalation-panel {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+.escalation-panel ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.escalation-panel li {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up - CivicConnect</title>
+  <link rel="stylesheet" href="signup.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="signup-wrapper">
+    <div class="signup-card">
+      <div class="signup-header">
+        <h2>Create Account</h2>
+        <p>Fill in the details to get started</p>
+      </div>
+
+      <form id="signupForm" class="signup-form">
+        <div class="form-group">
+          <input type="text" id="fullname" placeholder="Full Name" required />
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" placeholder="Email" required />
+        </div>
+        <div class="form-group password-wrapper">
+          <input type="password" id="password" placeholder="Password" required />
+          <span class="toggle-password" onclick="togglePassword('password', this)">👁️</span>
+        </div>
+        <div class="form-group">
+          <select id="role" required>
+            <option value="" disabled selected>Select Role</option>
+            <option value="DepartmentStaff">Department Staff</option>
+            <option value="FieldSupervisor">Field Supervisor</option>
+            <option value="Admin">Admin</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-signup">Sign Up</button>
+      </form>
+
+      <p id="message"></p>
+
+      <div class="signup-footer">
+        <p>Already have an account? <a href="login.html">Login here</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="signup.js"></script>
+</body>
+</html>
