@@ -3,8 +3,7 @@ const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 if (!currentUser) {
   window.location.href = "login.html";
 } else if (currentUser.role !== "Admin") {
-  // redirect non-admins to their own dashboards
-  if (currentUser.role === "Staff") {
+  if (currentUser.role === "DepartmentStaff") {
     window.location.href = "staff-dashboard.html";
   } else if (currentUser.role === "FieldSupervisor") {
     window.location.href = "supervisor-dashboard.html";

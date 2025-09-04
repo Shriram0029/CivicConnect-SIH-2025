@@ -1,12 +1,11 @@
 // 🔹 Role-based redirection
-const user = JSON.parse(localStorage.getItem("user"));
+const user = JSON.parse(localStorage.getItem("currentUser"));
 if (!user) {
   window.location.href = "login.html";
 }
-if (user.role !== "admin" && user.role !== "staff" && user.role !== "supervisor") {
-  window.location.href = "login.html";
+if (user.role !== "Admin" && user.role !== "DepartmentStaff" && user.role !== "FieldSupervisor") {
+   window.location.href = "login.html";
 }
-
 // ---- Map (Leaflet) ----
 const map = L.map('map').setView([13.0827, 80.2707], 12);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
